@@ -1,0 +1,239 @@
+/* ===================================
+   CSS RESET AND BASE STYLES
+   =================================== */
+
+/* Universal reset: removes default margins, padding, and sets consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+}
+
+/* Body styles: sets default font, background, and text properties */
+body {
+    font-family: Arial, sans-serif; /* Clean, readable font */
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark gray text for good contrast */
+    line-height: 1.4; /* Improved readability with proper line spacing */
+}
+
+/* ===================================
+   HEADER SECTION STYLES
+   =================================== */
+
+/* Header container: contains title and description */
+.header {
+    background-color: #e8e8e8; /* Light gray background */
+    border: 2px solid #ccc; /* Gray border for definition */
+    padding: 20px; /* Internal spacing */
+    text-align: center; /* Center-aligned content */
+    border-bottom: none; /* Remove bottom border to connect with tabs */
+}
+
+/* Main heading styles */
+.header h1 {
+    font-size: 24px; /* Large, prominent title */
+    margin-bottom: 8px; /* Space between title and description */
+    font-weight: bold; /* Emphasized text */
+}
+
+/* Header description text */
+.header p {
+    font-size: 14px; /* Smaller descriptive text */
+    color: #666; /* Lighter gray for secondary text */
+}
+
+/* ===================================
+   TAB NAVIGATION STYLES
+   =================================== */
+
+/* Tab navigation container: holds all tab buttons */
+.tab-navigation {
+    background-color: #f0f0f0; /* Slightly darker than header */
+    border: 2px solid #ccc; /* Consistent border styling */
+    border-top: none; /* Remove top border to connect with header */
+    padding: 0; /* No internal padding */
+    display: flex; /* Horizontal layout for tabs */
+}
+
+/* Individual tab button styles */
+.tab-button {
+    background-color: #ddd; /* Default inactive tab color */
+    border: 1px solid #999; /* Darker border for definition */
+    border-bottom: none; /* Remove bottom border for tab effect */
+    padding: 12px 20px; /* Comfortable click area */
+    cursor: pointer; /* Indicates clickable element */
+    font-size: 14px; /* Readable text size */
+    font-weight: normal; /* Normal weight for inactive tabs */
+    margin-right: 2px; /* Small gap between tabs */
+    transition: background-color 0.2s; /* Smooth color change on hover */
+}
+
+/* Tab button hover effect */
+.tab-button:hover {
+    background-color: #ccc; /* Darker on hover for feedback */
+}
+
+/* Active tab styling */
+.tab-button.active {
+    background-color: #fff; /* White background for active tab */
+    border-bottom: 2px solid #fff; /* White bottom border to "connect" with content */
+    font-weight: bold; /* Bold text for active state */
+}
+
+/* ===================================
+   MAIN CONTENT AREA STYLES
+   =================================== */
+
+/* Main content container: holds all tab content panels */
+.main-content {
+    background-color: #fff; /* White background for content area */
+    border: 2px solid #ccc; /* Consistent border styling */
+    border-top: none; /* Remove top border to connect with tabs */
+    min-height: 350px; /* Minimum height to prevent layout jumping */
+    padding: 30px; /* Generous internal spacing */
+}
+
+/* Tab content panels: hidden by default */
+.tab-content {
+    display: none; /* Hidden by default */
+}
+
+/* Active tab content: visible */
+.tab-content.active {
+    display: block; /* Show active tab content */
+}
+
+/* Tab content headings */
+.tab-content h2 {
+    font-size: 18px; /* Prominent but not overwhelming */
+    margin-bottom: 20px; /* Space before menu items */
+    color: #444; /* Slightly darker than body text */
+    border-bottom: 1px solid #ddd; /* Subtle underline separator */
+    padding-bottom: 8px; /* Space between text and border */
+}
+
+/* ===================================
+   MENU ITEMS STYLES
+   =================================== */
+
+/* Menu items container: holds all menu item buttons */
+.menu-items {
+    display: flex; /* Flexible layout */
+    flex-direction: column; /* Vertical stacking */
+    gap: 10px; /* Consistent spacing between items */
+    max-width: 300px; /* Limit width for better readability */
+}
+
+/* Individual menu item button styles */
+.menu-item {
+    background-color: #f8f8f8; /* Very light gray background */
+    border: 1px solid #bbb; /* Medium gray border */
+    padding: 12px 16px; /* Comfortable padding for clicking */
+    cursor: pointer; /* Indicates clickable element */
+    font-size: 14px; /* Readable text size */
+    text-align: left; /* Left-aligned text for consistency */
+    transition: all 0.2s; /* Smooth transitions for all properties */
+}
+
+/* Menu item hover effect */
+.menu-item:hover {
+    background-color: #e8e8e8; /* Darker background on hover */
+    border-color: #999; /* Darker border on hover */
+}
+
+/* Menu item active/pressed effect */
+.menu-item:active {
+    background-color: #d8d8d8; /* Even darker when clicked */
+}
+
+/* ===================================
+   STATUS BAR STYLES
+   =================================== */
+
+/* Status bar container: fixed at bottom of viewport */
+.status-bar {
+    background-color: #e8e8e8; /* Matches header background */
+    border: 2px solid #ccc; /* Consistent border styling */
+    border-top: none; /* Remove top border to connect with content */
+    padding: 12px 20px; /* Comfortable padding */
+    position: fixed; /* Fixed positioning at bottom */
+    bottom: 0; /* Stick to bottom of viewport */
+    left: 0; /* Full width from left */
+    right: 0; /* Full width to right */
+}
+
+/* Status bar content container */
+.status-content {
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Vertical centering */
+    font-size: 14px; /* Consistent text size */
+}
+
+/* Status label styling */
+.status-label {
+    font-weight: bold; /* Emphasized label */
+    margin-right: 8px; /* Space between label and message */
+    color: #555; /* Slightly darker gray */
+}
+
+/* Status message styling */
+.status-message {
+    color: #333; /* Default text color */
+}
+
+/* ===================================
+   STATUS MESSAGE STATE STYLES
+   =================================== */
+
+/* Loading state styling */
+.status-message.loading {
+    color: #0066cc; /* Blue color for loading state */
+    font-style: italic; /* Italic text to indicate temporary state */
+}
+
+/* Success state styling */
+.status-message.success {
+    color: #008800; /* Green color for success */
+}
+
+/* Error state styling */
+.status-message.error {
+    color: #cc0000; /* Red color for errors */
+}
+
+/* ===================================
+   RESPONSIVE DESIGN STYLES
+   =================================== */
+
+/* Mobile and tablet responsive adjustments */
+@media (max-width: 768px) {
+    /* Stack tabs vertically on smaller screens */
+    .tab-navigation {
+        flex-direction: column; /* Change from horizontal to vertical */
+    }
+    
+    /* Adjust tab button styling for vertical layout */
+    .tab-button {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1px; /* Add bottom margin for separation */
+        border-bottom: 1px solid #999; /* Add bottom border */
+    }
+    
+    /* Active tab styling for vertical layout */
+    .tab-button.active {
+        border-bottom: 1px solid #999; /* Maintain border */
+        border-right: 2px solid #fff; /* Right border instead of bottom */
+    }
+    
+    /* Adjust main content for mobile */
+    .main-content {
+        padding: 20px; /* Reduced padding for smaller screens */
+        margin-bottom: 60px; /* Space for fixed status bar */
+    }
+    
+    /* Smaller header text on mobile */
+    .header h1 {
+        font-size: 20px; /* Reduced font size for mobile */
+    }
+}

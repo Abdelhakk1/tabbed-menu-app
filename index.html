@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for proper document structure and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Menu Application</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section: Contains the main title and description -->
+    <header class="header">
+        <h1>Restaurant Menu System</h1>
+        <p>Select a tab to view menu items</p>
+    </header>
+
+    <!-- Tab Navigation: Horizontal tabs for switching between different menu categories -->
+    <nav class="tab-navigation">
+        <!-- Tab 1: Main Dishes - starts as active tab -->
+        <button class="tab-button active" data-tab="tab1">Tab 1 - Main Dishes</button>
+        <!-- Tab 2: Beverages -->
+        <button class="tab-button" data-tab="tab2">Tab 2 - Beverages</button>
+        <!-- Tab 3: Desserts -->
+        <button class="tab-button" data-tab="tab3">Tab 3 - Desserts</button>
+    </nav>
+
+    <!-- Main Content Area: Contains all tab content panels -->
+    <main class="main-content">
+        <!-- Tab 1 Content: Main Dishes Menu (visible by default) -->
+        <div id="tab1" class="tab-content active">
+            <h2>Main Dishes Menu</h2>
+            <!-- Container for menu item buttons -->
+            <div class="menu-items">
+                <!-- Each button has data-item attribute for identification in JavaScript -->
+                <button class="menu-item" data-item="Pizza">Pizza</button>
+                <button class="menu-item" data-item="Burger">Burger</button>
+                <button class="menu-item" data-item="Pasta">Pasta</button>
+                <button class="menu-item" data-item="Steak">Steak</button>
+                <button class="menu-item" data-item="Salad">Salad</button>
+            </div>
+        </div>
+
+        <!-- Tab 2 Content: Beverages Menu (hidden by default) -->
+        <div id="tab2" class="tab-content">
+            <h2>Beverages Menu</h2>
+            <div class="menu-items">
+                <!-- Beverages menu items - fewer items than main dishes -->
+                <button class="menu-item" data-item="Coffee">Coffee</button>
+                <button class="menu-item" data-item="Tea">Tea</button>
+                <button class="menu-item" data-item="Soda">Soda</button>
+                <button class="menu-item" data-item="Juice">Fresh Juice</button>
+            </div>
+        </div>
+
+        <!-- Tab 3 Content: Desserts Menu (hidden by default) -->
+        <div id="tab3" class="tab-content">
+            <h2>Desserts Menu</h2>
+            <div class="menu-items">
+                <!-- Desserts menu items - fewest items to show variety -->
+                <button class="menu-item" data-item="Ice Cream">Ice Cream</button>
+                <button class="menu-item" data-item="Cake">Chocolate Cake</button>
+                <button class="menu-item" data-item="Pie">Apple Pie</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Status Bar: Fixed at bottom, shows API call status and messages -->
+    <footer class="status-bar">
+        <div class="status-content">
+            <!-- Status label and message container -->
+            <span class="status-label">Status:</span>
+            <!-- Status message element - updated dynamically by JavaScript -->
+            <span class="status-message" id="statusMessage">Ready - Select a menu item to simulate API call</span>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file - placed at end for proper DOM loading -->
+    <script src="script.js"></script>
+</body>
+</html>
