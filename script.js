@@ -278,26 +278,3 @@ function getCurrentTabInfo() {
         timestamp: new Date().toISOString() // Current timestamp in ISO format
     };
 }
-
-// ===================================
-// END OF SCRIPT
-// ===================================
-
-/*
- * ADDITIONAL NOTES FOR DEVELOPERS:
- * 
- * 1. Error Handling: The application includes defensive programming practices
- *    such as checking if DOM elements exist before manipulating them.
- * 
- * 2. State Management: Global variables are used to track application state.
- *    In a larger application, consider using a state management library.
- * 
- * 3. Performance: Event listeners are attached once during initialization
- *    rather than being added/removed dynamically for better performance.
- * 
- * 4. Accessibility: Consider adding ARIA attributes and keyboard navigation
- *    support for better accessibility in future versions.
- * 
- * 5. Extensibility: The modular function structure makes it easy to add
- *    new features like additional tabs, menu items, or API endpoints.
- */
